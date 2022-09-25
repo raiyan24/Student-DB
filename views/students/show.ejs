@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Student</title>
+</head>
+<body>
+    
+    <div class="container my-5 student_single">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <a href="/student" class="btn btn-sm btn-primary">Back</a><br><br>
+                <div class="card shadow">
+                    <div class="card-body">
+                        <% if ( student.photo == 'avatar.png') { %>
+                            <img src="/images/<%= student.photo %> " alt="">
+                        <% } else { %>
+                        <img src="/images/students/<%= student.photo %> " alt="">
+                        <% }  %>
+                        <h2><%= student.name %> </h2>
+                        <p><%= student.cell %> </p>
+                        <p><%= student.email %> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
